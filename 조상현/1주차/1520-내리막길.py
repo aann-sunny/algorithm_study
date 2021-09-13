@@ -1,6 +1,6 @@
 # 백준 1520 - 내리막길(https://www.acmicpc.net/problem/1520)
-# 런타임에러(RecursionError)발생..
 import sys
+sys.setrecursionlimit(10000) # RecursionError 방지
 MAP = []
 
 M, N = map(int, sys.stdin.readline().split())
