@@ -7,7 +7,7 @@ for i in range (num):
     conference_list[i][0]=start
     conference_list[i][1]=end
 
-conference_list=sorted(conference_list,key=lambda x:x[0])
+conference_list=sorted(conference_list,key=lambda x:x[0]) #일찍 시작하는 순서
 conference_list=sorted(conference_list,key=lambda x:x[1]) #끝나는 시간이 빠른 순서
 
 maxnum=0
