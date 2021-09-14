@@ -19,6 +19,10 @@ for conference in conference_list:
 
 print(maxnum)
 
+"""
+잘 푸셨습니다! 정렬을 2번 하고 있는데, 사실 sorted는 다중키로 정렬이 가능합니다. 
+key=lambda x: (x[1], x[0]) 이런식으로 원하는 우선순위를 나열하면 됩니다.
+"""
 
 
 

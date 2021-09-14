@@ -28,3 +28,8 @@ for i in range (len(cb)):
 
 print(max(sum_list))
 
+"""
+combinations는 매우 유용한 라이브러리이지만, 이 문제에는 적합하지 않습니다.
+이 문제는 가능한 모든 배낭 짐들의 조합을 계산하면 답을 얻을 수 있지만, 그렇게 하지 않아도 답을 얻을 수 있습니다.
+Overlapping subproblems, Optimal subproblems 두 개념에 대해 공부해보시면 좋을 것 같습니다.
+"""
