@@ -3,8 +3,8 @@
 # def hasContructor(N):
 #     for num in range(1, N):
 #         sum, num_to_str = num, str(num)
-#         # for i in range(0, len(num_to_str)):
-#         #     sum += int(num_to_str[i])
+#         for i in range(0, len(num_to_str)):
+#             sum += int(num_to_str[i])
 #         for i in num_to_str:
 #             sum += int(i)
 #         if sum == N:
