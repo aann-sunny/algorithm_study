@@ -24,4 +24,8 @@ for i in range (num):
         else:
             top=stack.pop()
             print(top)
-        
+
+"""
+피드백 코멘트 : 
+저번에 푸신 스택 문제와 유사해서 큰 어려움은 없으셨을 것 같습니다!
+"""

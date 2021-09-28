@@ -34,3 +34,9 @@ dfs(V)
 print()
 visited=[False for i in range(N+1)]
 bfs(V)
+
+"""
+피드백 코멘트 :
+파이썬에서 큐의 pop 연산을 list.pop(0)로 구현하면 성능이 좋지 않습니다.
+deque에 대해 알아보시면 좋을 듯 합니다!
+"""
