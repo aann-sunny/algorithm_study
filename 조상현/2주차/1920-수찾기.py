@@ -21,3 +21,10 @@ for target in numbers:
         else:
             left = mid + 1
     print(result)
+
+"""
+피드백 코멘트 :
+정석적인 이분탐색으로 잘 푸신 것 같습니다!
+참고로 파이썬에서는 괄호 생략이 가능해서 while left <= right 로 쓰는 것도 가능합니다.
+
+"""

@@ -22,3 +22,9 @@ T = int(sys.stdin.readline())
 for i in range(T):
     N, M = map(int, sys.stdin.readline().split())
     print(combination(M, N))
+
+"""
+피드백 코멘트 :
+팩토리얼은 파이썬 내장 라이브러리에서도 지원하니 참고해보세요! 공부 측면에서는 직접 구현해보는 경험도 필요합니다. 
+실전에서는 내장 라이브러리를 쓰는 편이 나으니 익혀두시면 좋을 듯 합니다.
+"""
