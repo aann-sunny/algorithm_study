@@ -3,9 +3,7 @@ n, s = map(int, sys.stdin.readline().split())
 nlist = list(map(int, sys.stdin.readline().split()))
 
 start, end = 0, 0
-flag = 0
 shortest = n
-count = 0
 mysum = nlist[0]
 
 while end < n:
@@ -16,7 +14,6 @@ while end < n:
             mysum += nlist[end]
 
     else:           # 현재 구간 합이 s보다 크거나 같을 경우
-        flag = 1    # flag = 답을 찾을 수 있다
         if shortest > end-start:    # 현재까지의 최소거리보다 짧으면
             shortest = end-start+1  # 최소거리 갱신
 
@@ -28,7 +25,7 @@ while end < n:
             if end < n:
                 mysum += nlist[end] # 끝점을 늘려가며 부분합 추가
 
-if flag==1:
+if shortest !=n:
     print(shortest)
 else:
     print(0)
