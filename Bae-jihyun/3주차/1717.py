@@ -14,10 +14,8 @@ def find(x):                    # graph가 [0, 3, 2, 7, 4, 5, 6, 7] 일때, find
 def union(x,y):
     rx = find(x)
     ry = find(y)
-    if rx > ry:                # 1이 idx 2 이상부터 있으면 안 된다. find함수가 제대로 작동하지 않음. 
-        graph[ry] = rx
-    else:
-        graph[rx] =ry
+    if rx!=ry:
+        graph[ry]=rx
 
 
 for i in range(m):
