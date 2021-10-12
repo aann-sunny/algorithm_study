@@ -133,3 +133,10 @@ def getEarlyCount(tree, node, isEarly):    # node를 루트로 하는 트리에�
         return A[node][1]
 
 print(min(getEarlyCount(tree, 1, True), getEarlyCount(tree, 1, False)))
+
+"""
+피드백 코멘트 :
+여러 시행착오를 잘 기록해주셨네요. 말씀하신대로 트리의 루트 노드를 무엇으로 잡아도 상관이 없습니다.
+124라인에 인자로 tree를 받게 하지 않아도 될 것 같습니다. 인자는 적을수록 좋습니다.
+130번 라인에서 isEarly == True 로 비교를 할 필요는 없습니다. isEarly 자체가 boolean 변수이니까 이것으로 분기를 처리하면 됩니다.
+"""

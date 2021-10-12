@@ -51,3 +51,8 @@ else:
             answer_sum = abs(val[i] + val[j])     # 정답이 될 애들 갱신
             answer_i, answer_j = i, j          
     print(val[answer_i], val[answer_j])
+
+"""
+피드백 코멘트 :
+35~38번 라인의 최적화가 인상적이네요. 이 문제는 없어도 잘 동작하지만, 나중에 필요하면 적용할 수 있는 좋은 아이디어인 것 같습니다. 
+"""
