@@ -1,4 +1,4 @@
-#피드백 후 수정
+# 피드백 후 수정
 
 """
 3. 2번 방법과는 다르게 start 이후 조건에 맞을 때까지 모두 end를 더하지 않음 --> 시간 절약
@@ -6,24 +6,26 @@
 """
 
 import sys
-N,S =map(int,sys.stdin.readline().split())  #스페이바 공백을 기준으로 int형 변수 두개 입력받기
-num_list=list(map(int,sys.stdin.readline().split()))  #N번만큼 split
-i,j=0,0
-result=0
-ans=N+1
+
+N, S = map(int, sys.stdin.readline().split())  # 스페이바 공백을 기준으로 int형 변수 두개 입력받기
+num_list = list(map(int, sys.stdin.readline().split()))  # N번만큼 split
+i, j = 0, 0
+result = 0
+ans = N + 1
 
 while True:
-    if result<S:
-        if j==N:break
+    if result < S:
+        if j == N:
+            break
         else:
-            result+=num_list[j]
-            j+=1
+            result += num_list[j]
+            j += 1
     else:
-        result-=num_list[i]
-        i+=1
-        ans=min(ans,j-i+1)
+        result -= num_list[i]
+        i += 1
+        ans = min(ans, j - i + 1)
 
-if ans==N+1:
+if ans == N + 1:
     print(0)
 else:
     print(ans)

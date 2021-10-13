@@ -1,14 +1,14 @@
-total=int(input())
-num=0
-numbers=[]
+total = int(input())
+num = 0
+numbers = []
 
-for i in range (total):
-    sum=0
-    num=i
-    while(i>0):
-        sum+=i%10
-        i//=10
-    if (sum+num==total):
+for i in range(total):
+    sum = 0
+    num = i
+    while i > 0:
+        sum += i % 10
+        i //= 10
+    if sum + num == total:
         numbers.append(num)
 
 if not numbers:
