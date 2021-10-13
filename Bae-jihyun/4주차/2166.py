@@ -10,18 +10,12 @@ for _ in range(N):
     lst.append(list(map(int, input().split())))
 
 # 0 ~ N-1까지 신발끈 공식을 사용하고 
-for i in range(N-1):   
-    a += lst[i][0]*lst[i+1][1]
-    b += lst[i][1]*lst[i+1][0]
-
-# for문을 벗어나는 연산은 따로 실행해줌.
-a = a + lst[N-1][0]*lst[0][1]
-b = b + lst[N-1][1]*lst[0][0]
-
+for i in range(N):   
+    a += lst[i][0]*lst[(i+1)%N][1]
+    b += lst[i][1]*lst[(i+1)%N][0]
 
 # 공식대로 절대값을 먼저 씌워주고 2로 나눠주고 반올림해주기. 
 print(round(abs(a-b)/2,1))
-
 
 
 '''
