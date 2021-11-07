@@ -1,23 +1,28 @@
-n, k = input().split()  
-n = int(n)   
-k = int(k)
+import sys
 
-table =[0]*(k+1)   #0부터 k까지의 table 생성해야해서 k+1
+n, k = map(int, sys.stdin.readline().strip().split())   # n:입력받을 횟수 , k: 최대 무게
+
+# 0부터 k까지의 table 생성해야해서 k+1
+table = [0]*(k+1)               # table: 각 무게 별 넣을 수 있는 물건들의 가치 합
+
 for i in range(n):
-    w,v = [int(x) for x in input().split()]  #입력받기
-    if w>k:                                  #w가 table 범위(k)넘어서면 j=0일때도 계산 안되도록 continue실행
-        continue 
-    for j in range(k,0,-1):                  #k부터 1까지
-        if j+w <= k and table[j]!=0:         #j+w가 range안에 들어오거나, 이미 어떤 값을 가지고있으면 계산해줌
-            table[j+w] = max(table[j+w], table[j]+v) #큰 값을 누적시켜야함.(큰 값을 구하고있기 때문에)
-    table[w]=max(table[w],v)                 #어떤 값을 가지고 있지 않다면(j=0) 가치(v) 넣어줌. (위 식이 j=0일때와 동일)
+    w, v = [int(x) for x in input().split()]  # 각 물건의 w: 무게, v: 가치 입력받기
+    if w > k:                   # w가 table 범위(k)넘어서면 i=0일때도 계산 안되도록 continue실행
+        continue
+
+    # for문은 입력으로 들어온 v와 무게 i에 들어갈 수 있는 물건들의 가치 합을 더해주는 역할.
+    for i in range(k, 0, -1):                 # k부터 1까지, i : table의 각 무게
+        # i+w가 최대 무게 안에 들어오거나, 이미 어떤 값을 가지고 있으면 계산해줌
+        if i+w <= k and table[i] != 0:
+
+            # 큰 값을 누적시켜야함.(큰 값을 구하고있기 때문에)
+            table[i+w] = max(table[i+w], table[i]+v)
+
+        # print(i, table)
+    # 어떤 값을 가지고 있지 않다면(i=0) 가치(v) 넣어줌. (이 식은 i=0일때와 동일)
+    table[w] = max(table[w], v)
 print(max(table))
 
-
-
-# n:3, w:3, v:6, k:7, j:4일때 
-# table[7]=max(table[7], 8+6)    (table[7]=0일 때)
-# 따라서 table[7]에는 14가 들어감.
 
 """
 피드백 코멘트 :
