@@ -1,3 +1,4 @@
+# 완료
 """
 #최종적으로 몇개의 짐을 가져갈지 모른다는 점에서 많은 고민을 한 문제.
 from itertools import combinations  #조합을 이용해 볼 수 있는 패키지 
@@ -64,6 +65,7 @@ combinations는 매우 유용한 라이브러리이지만, 이 문제에는 적�
 이 문제는 가능한 모든 배낭 짐들의 조합을 계산하면 답을 얻을 수 있지만, 그렇게 하지 않아도 답을 얻을 수 있습니다.
 Overlapping subproblems, Optimal subproblems 두 개념에 대해 공부해보시면 좋을 것 같습니다.
 """
+
 import sys
 
 N, K = map(int, sys.stdin.readline().split())
@@ -84,3 +86,5 @@ for i in range(1, N + 1):
             dp_list[i][j] = dp_list[i - 1][j]
 
 print(dp_list[N][K])
+
+# O(NK)

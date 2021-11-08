@@ -1,3 +1,4 @@
+# 완료
 import math
 import sys
 
@@ -9,6 +10,8 @@ for i in range(num):
     N, M = map(int, sys.stdin.readline().split())
     ans = math.factorial(M) // (math.factorial(N) * math.factorial(M - N))
     print(ans)
+
+# O(N)
 
 """
 피드백 코멘트 :

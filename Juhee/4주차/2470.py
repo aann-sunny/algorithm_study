@@ -26,6 +26,7 @@ while start < end:
 
 print(feature_list[al], feature_list[ar])
 
+# O(N)
 """
 피드백 코멘트 :
 투포인터를 이용해 잘 풀어주셨습니다. start를 증가시키고, end를 감소시켰을 때 어떤 영향이 있는지 잘 고민해보신 것 같습니다.

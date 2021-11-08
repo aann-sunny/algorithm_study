@@ -1,6 +1,9 @@
-# 피드백 수정 완료
+# 완료
 from collections import deque
 import sys
+
+
+# O(N^2) --> O(dfs번*N) dfs번: 이진 트리에서의 높이
 
 
 def dfs(V):
@@ -11,7 +14,7 @@ def dfs(V):
             dfs(i)
 
 
-# 큐 이용
+# 큐 이용  O(N^2) --> O(dfs번*N)
 def bfs(V):
     queue = deque([V])
     visited[V] = True

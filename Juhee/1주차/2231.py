@@ -1,3 +1,4 @@
+# 완료
 total = int(input())
 num = 0
 numbers = []
@@ -15,3 +16,5 @@ if not numbers:
     print(0)
 else:
     print(min(numbers))
+
+# O(N)
