@@ -25,20 +25,19 @@ def cal(x, y):
         ny = y + dy                               # 다음 y좌표구하기
 
         if 0 <= nx < N and 0 <= ny < N:         # 다음 x, r좌표가 유효한지
-            if ground[nx][ny] > i and board[nx][ny] == -1:
+            if ground[nx][ny] > water and board[nx][ny] == -1:
                 cal(nx, ny)
 
 
 # 계산하기
-for i in range(1, h):   # i: 물높이, 물 높이 N~100는 물에 잠기지 않는 영역이 0이라 계산 x.
+for water in range(1, h):   # water: 물높이, 물 높이 N~100는 물에 잠기지 않는 영역이 0이라 계산 x.
     board = [[-1] * N for _ in range(N)]        # board(방문했는지) 초기화
     for j in range(N):
         for k in range(N):
-            if ground[j][k] > i and board[j][k] == -1:
+            if ground[j][k] > water and board[j][k] == -1:
                 responce = responce + 1
                 cal(j, k)
-    if responce > result:
-        result = responce
+    result = min(result, responce)
     responce = 0
 
 print(result)
