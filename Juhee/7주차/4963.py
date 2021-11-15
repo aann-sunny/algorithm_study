@@ -3,8 +3,7 @@ import sys
 read = sys.stdin.readline
 sys.setrecursionlimit(10000)
 
-visited = []
-anw = []
+ans = []
 
 # 동서남북대각선 모든 방향
 dx = [1, 1, -1, -1, 1, -1, 0, 0]
@@ -25,12 +24,12 @@ while True:
     if a == 0 and b == 0:
         break
     graph = []
-    anw = 0
+    ans = 0
     for _ in range(b):
         graph.append(list(map(int, read().split())))
     for i in range(b):
         for j in range(a):
             if graph[i][j] == 1:
                 dfs(i, j)  # 끝까지 내려갔다가 옆으로 갈때 anw+1
-                anw += 1
-    print(anw)
+                ans += 1
+    print(ans)
