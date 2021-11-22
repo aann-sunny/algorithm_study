@@ -1,4 +1,3 @@
-#1149
 # H(i) != H(i-1) != H(i+1)
 import sys
 
