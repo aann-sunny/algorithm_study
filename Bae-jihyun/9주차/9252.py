@@ -12,8 +12,8 @@ for j in first:          # c가 늘어나야함.
             board[r][c] = board[r-1][c-1]+1  # LCS에 i와 j를 추가하기 전보다 1개 늘어남.
         else:
             board[r][c] = max(board[r][c-1], board[r-1][c])
-        r = r+1
-    c = c+1
+        r += 1
+    c += 1
     r = 1
 
 
