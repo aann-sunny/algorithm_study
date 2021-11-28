@@ -31,7 +31,7 @@ while target != 0:
         target -= 1
         y -= 1    # 대각선으로 이동
         x -= 1
-    else:
+    else:  # LCS아님.
         if board[y - 1][x] > board[y][x - 1]:
             y -= 1
         else:

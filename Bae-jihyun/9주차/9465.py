@@ -15,8 +15,8 @@ for _ in range(T):
         for i in range(2):
             result[i][j] = max(
                 result[i][j-1], result[(i+1) % 2][j-1]+lst[i][j-1]
-                )
-    print(max(result[0][j], result[1][j]))
+            )
+    print(max(result[:][j]))
 
 
 ''' 풀이
