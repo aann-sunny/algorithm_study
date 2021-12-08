@@ -8,11 +8,14 @@ alph_list = list(map(str, sys.stdin.readline().split()))
 
 alph_list.sort()  # 문자열도 sort 가능
 
+# stable sort: 중복된 키를 순서대로 정렬. 순서가 중요할 때.
+# unstable sort: ex)quick sort
+
 result = []
 vowels = ["a", "e", "i", "o", "u"]
 
 # sort하고 나서 combination하기 때문에 순서 고려 더 이상 X
-for c in list(combinations(alph_list, L)):  # L개 만큼 뽑기
+for c in combinations(alph_list, L):  # L개 만큼 뽑기
     vowel_count = 0
     for char in c:
         if char in vowels:

@@ -1,6 +1,7 @@
 # https://www.acmicpc.net/submit/9663
 # https://idea-sketch.tistory.com/29
-# python은 시간 초과. pypy3
+# python은 시간 초과.
+# pypy3: 파이썬을 더 빠르게. 지원되지 않는 라이브러리 있음.
 
 import sys
 
@@ -24,6 +25,7 @@ def findAns(n):
                 visited[i] = True
                 findAns(n + 1)  # 다음 행으로.
                 visited[i] = False  # 다음 행으로 가니 초기화
+                # 재활용 가능
 
 
 N = int(sys.stdin.readline())
@@ -36,7 +38,7 @@ N = int(sys.stdin.readline())
 # 0 0 0 0  값 = 열
 chess_list = [0 for _ in range(N)]
 visited = [False for _ in range(N)]
-count = 0
 
+count = 0
 findAns(0)
 print(count)
