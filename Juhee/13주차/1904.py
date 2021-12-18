@@ -7,17 +7,24 @@ N=4, N=5, N=6 일 때
 for문 내 규칙 
 -> math.factorial(N - i)) / (math.factorial(i) * math.factorial(N - 2 * i)
 
-시간초과 --> DP 사용해서 다시 해보자
+시간초과
+O(N//2) N//2=500000
+(N이 최대 10,000,000인 경우 O(N) 가능)
+그래서 가능한 줄 알았으나 O(N//2)=O(N)라서 시간 초과(맞나요..?)
+--> DP 사용해서 다시 해보자
+
+00의 개수로 경우의 수를 나누지 말고 개수를 세보니 규칙 나옴
 """
 
 import sys
-import math
 
 N = int(sys.stdin.readline())
 
-sum = 0
+dp_list = [0] * 1000001
+dp_list[1] = 1
+dp_list[2] = 2
 
-for i in range(N // 2 + 1):
-    sum += (math.factorial(N - i)) / (math.factorial(i) * math.factorial(N - 2 * i))
+for i in range(3, N + 1):
+    dp_list[i] = (dp_list[i - 1] + dp_list[i - 2]) % 15746
 
-print(sum % 15746)
+print(dp_list[N])
