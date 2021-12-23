@@ -28,7 +28,4 @@ while B > A:
         break
     result += 1
 
-if A == B:
-    print(result + 1)
-else:
-    print(-1)
+print(result + 1 if A == B else -1)
