@@ -5,7 +5,7 @@ import sys
 N = int(sys.stdin.readline())
 num_list = []
 ans_list = []
- 
+
 for _ in range(0, N):
     num = int(sys.stdin.readline())
     num_list.append(num)
@@ -35,6 +35,7 @@ N = int(input())
 hq = sorted([int(input()) for _ in range(N)])
 ans = 0
 for _ in range(N - 1):  # 반복문을 통해 두개 더하고 넣고 다시 더하고 넣고 반복
+    # heappop:  원소를 삭제할 대상 리스트를 인자로 넘기면, 가장 작은 원소를 삭제 후에 그 값을 리턴
     a, b = heapq.heappop(hq), heapq.heappop(hq)  # 작은거 두개 꺼내서
     c = a + b  # 더하고
     ans += c
