@@ -24,6 +24,10 @@ for i in range(1, K):
 
 for i in range(1, N):
     for j in range(1, K):
-        dp[i][j] = dp[i-1][j] + dp[i][j-1]
+        dp[i][j] = (dp[i-1][j] + dp[i][j-1]) % 1000000000
 
-print(dp[N-1][K-1] % 1000000000)
+print(dp[N-1][K-1])
+
+'''
+%(모듈러)연산은 매번(27번째 줄에서) 해주는 것이 좋음
+'''

@@ -3,8 +3,8 @@
 문제를 읽어보니 작은 순대로 더하는 것이 더 효율적이라고 생각이 들어
 여러 예제를 통해 확인해본 결과 sort를 시키고 작은 순부터 더하는 것이 맞다고 생각했다.
 
-list의 sort는 O(N Log N)으로 N이 최대 100,000이므로 대략 1,600,000이므로 통과
-하지만 heapq를 이용해 가장 작은 수를 pop함으로써 O(1)로 최적화시킴.
+1차시도: list의 sort는 O(N Log N)으로 N이 최대 100,000이므로 대략 1,600,000이므로 통과
+2차시도: 하지만 heapq를 이용해 가장 작은 수를 pop함으로써 O(1)로 최적화시킴.
 '''
 import heapq
 
@@ -15,7 +15,7 @@ result = 0
 for _ in range(N):
     lst.append(int(input()))
 
-heapq.heapify(lst)      # list를 heap으로 변환. O(N). 아직 정렬되어있지 않음.
+heapq.heapify(lst)      # list를 heap으로 변환. O(N).
 
 while len(lst) != 1:    # 아래에서 pop과 push가 계속 일어난다. len이 1이 되면 더이상 계산할 필요가 없음.
     num1 = heapq.heappop(lst)       # heappop : 가장 작은 원소 삭제 후 그 값 리턴
