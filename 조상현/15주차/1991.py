@@ -12,8 +12,7 @@ for _ in range(N):
     Tree[node] = [left, right]
 
 def preorder_traversal(node):
-    left_node = Tree[node][0]
-    right_node = Tree[node][1]
+    left_node, right_node = Tree[node]
 
     print(node, end='')
     if left_node != '.':
@@ -22,8 +21,7 @@ def preorder_traversal(node):
         preorder_traversal(right_node)
 
 def inorder_traversal(node):
-    left_node = Tree[node][0]
-    right_node = Tree[node][1]
+    left_node, right_node = Tree[node]
 
     if left_node != '.':
         inorder_traversal(left_node)
@@ -32,8 +30,7 @@ def inorder_traversal(node):
         inorder_traversal(right_node)
 
 def postorder_traversal(node):
-    left_node = Tree[node][0]
-    right_node = Tree[node][1]
+    left_node, right_node = Tree[node]
 
     if left_node != '.':
         postorder_traversal(left_node)

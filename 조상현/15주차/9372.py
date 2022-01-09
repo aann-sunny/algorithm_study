@@ -24,14 +24,8 @@ for _ in range(T):
 
     for i in range(M):
         a, b = map(int, input().split())
-        if a in graph:
-            graph[a].append(b)
-        else:
-            graph[a] = [b]
-        if b in graph:
-            graph[b].append(a)
-        else:
-            graph[b] = [a]
+        graph[a] = graph[a] + [b] if a in graph else [b]
+        graph[b] = graph[b] + [a] if b in graph else [a]
     # DFS
     stack = [1]
     while stack:
