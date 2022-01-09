@@ -4,14 +4,15 @@
 3. 최종 결과 출력
 '''
 import sys
+from collections import deque
 
 
 def bfs(x):
-    q = [x]
+    q = deque([x])
     visited[x] = 1
     cnt = 0
     while q:
-        now = q.pop(0)
+        now = q.popleft()
         for i in air[now]:
             if visited[i] == 0:
                 visited[i] = 1
@@ -40,3 +41,10 @@ for _ in range(T):
             result += bfs(i)
 
     print(result)
+
+'''
+deque와 queue의 차이
+deque : double-ended queue의 약자로 양방향에서 데이터 추가/제거 할 수 있는 자료구조
+Queue : 주로 멀티 쓰레딩 환경에서 사용, 내부적으로 락킹(locking)을 지원하여
+        여러 개의 쓰레드가 동시에 데이터를 추가하거나 삭제가능 ( 방향성 없음 )
+'''
