@@ -8,7 +8,7 @@ class Node:
         self.right = right
 
 
-def pre_order(key):
+def pre_order(key):                     # 전위 순회(루트 > 왼쪽 자식> 오른쪽 자식)
     node = tree[key]
     print(node.value, end="")
     if node.left != '.':
@@ -17,7 +17,7 @@ def pre_order(key):
         pre_order(node.right)
 
 
-def in_order(key):
+def in_order(key):                      # 중위 순회(왼쪽 자식 > 루트 > 오른쪽 자식)
     node = tree[key]
     if node.left != '.':
         in_order(node.left)
@@ -26,7 +26,7 @@ def in_order(key):
         in_order(node.right)
 
 
-def post_order(key):
+def post_order(key):                    # 후위 순회 (왼쪽 자식 > 오른쪽 자식 > 루트)
     node = tree[key]
     if node.left != '.':
         post_order(node.left)

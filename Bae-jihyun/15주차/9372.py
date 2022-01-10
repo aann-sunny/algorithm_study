@@ -45,6 +45,7 @@ for _ in range(T):
 '''
 deque와 queue의 차이
 deque : double-ended queue의 약자로 양방향에서 데이터 추가/제거 할 수 있는 자료구조
+        list와 비슷하게 동작하지만, list보다 deque가 더 빠르게 동작하도록 설계
 Queue : 주로 멀티 쓰레딩 환경에서 사용, 내부적으로 락킹(locking)을 지원하여
         여러 개의 쓰레드가 동시에 데이터를 추가하거나 삭제가능 ( 방향성 없음 )
 '''

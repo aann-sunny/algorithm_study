@@ -7,7 +7,7 @@ def dfs(start, visited=[]):       # 반복되는 일 : dict의 values([정점, �
 
     for node in graph[start]:       # 정점과 이어진 node들이
         if node not in visited:     # 만약 visited에 없다면
-            dfs(node, visited)      # def 다시 실행(visited에 추가하고 정점과 이어진 노드로 이동)
+            dfs(node, visited)      # dfs 다시 실행(visited에 추가하고 정점과 이어진 노드로 이동)
     return visited
 
 
