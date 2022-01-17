@@ -54,7 +54,7 @@ for _ in range(N):
 root = -1
 for i in range(1, N + 1):
     # 루트이기에 전입 차수는 0 (루트노드는 부모가 없다.)
-    if not isRoot[i]:
+    if isRoot[i] == 0:
         root = i
 
 # 중위 순회
