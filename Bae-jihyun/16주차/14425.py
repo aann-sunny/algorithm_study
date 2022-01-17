@@ -1,6 +1,5 @@
 '''
 set, dict는 Hash 값을 이용하기 때문에 검색할 때 O(1)이 걸린다.
-문제를 보고 트리로 푸는 방법을 모르겠어서 일단 search하면 set 라고 생각했기 때문에 dict를 이용했다.
 Trie를 공부하기 위한 문제같아서 Trie에 관한 정리를 아래에 해두었다.
 '''
 
@@ -35,7 +34,7 @@ Trie란?
     child(자식 노드들) : {}    # set 사용
 
     class Node(object):
-        def __init__(self, key, data=None):
+        def __init__(self, key, data = None):
             self.key = key
             self.data = data
             self.children = {}
