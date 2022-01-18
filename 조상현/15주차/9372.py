@@ -18,6 +18,8 @@ input = sys.stdin.readline
 T = int(input())
 
 for _ in range(T):
+    # 디폴트 딕셔너리를 이용하면 키 값에 대응하는 밸류가 없을 때 자동으로 채워줌
+    # 흔히 딕셔너리 = map
     graph = {}
     N, M = map(int, input().split())
     visited = [0 for i in range(N + 1)]
