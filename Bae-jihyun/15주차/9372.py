@@ -29,7 +29,7 @@ for _ in range(T):
     visited = [0 for __ in range(N + 1)]
     result = 0
 
-    # 양방향 그래프로 입력받기
+    # 양방향 그래프로 입력받기 (인접리스트)
     for i in range(M):
         a, b = map(int, input().split())
         air[a].append(b)
